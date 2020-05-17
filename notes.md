@@ -11,7 +11,6 @@
 
 ### Installation, Configuration & Validation (12%)
 
-* Not required to build cluster
 * Everything but kubelet can be run as a Pod
 * Certificate generation
   - CA
@@ -33,8 +32,7 @@
   - kube-scheduler
     - `$ openssl genrsa -out kube-scheduler.key 2048`
     - `$ openssl req -new -key kube-scheduler.key -subj="/CN=system:kube-scheduler" -out kube-scheduler.csr`
-    - `$ openssl x509 -req -in kube-scheduler.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out kube-scheduler.crt -days 1000`
-  -  
+    - `$ openssl x509 -req -in kube-scheduler.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out kube-scheduler.crt -days 1000` 
 * systemd: manages system services, a single service is typically known as a unit and is initialized from a `.service` file.
    - status of systemd service 
      - `$ systemctl status nginx.service`
@@ -200,6 +198,6 @@
 ### Logging/Monitoring (5%)
 * Not much to this section just know logs and logs -c for container specific.
 ### Storage (7%)
-
+* Not many notes for me as much of it is rollover from CKAD
 ### Troubleshooting (10%)
 
