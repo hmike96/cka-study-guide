@@ -51,7 +51,7 @@
 * journald: log information daemon that collects systemd services logs
    - logs of a service
      - `$ journalctl -u nginx.service` 
-* kubeadm: kubenetes administrator cli tool
+* kubeadm: kubernetes administrator cli tool
    - initialize control node
      - `$ kubeadm init --pod-network-cidr=1234/12`
 * Kubeadm stores kubernetes components in etc/kubernetes/manifest/ and non kubeadm is stored etc/systemd/system/
